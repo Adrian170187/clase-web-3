@@ -40,7 +40,7 @@ header img {
    ========================== */
 section {
     background: #33342f;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 40px auto;
     max-width: 900px;
     border-radius: 14px;
     box-shadow: 0 4px 18px rgba(0,0,0,0.25);
