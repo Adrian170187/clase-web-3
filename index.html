@@ -4,62 +4,107 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exclusive</title>
-    <style>
-      header img {
-        width: 1000px;
-      }
-      section img {
-        width: 100px;
-      }
-    </style>
-    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Enlazamos el archivo de estilos externo -->
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <header>
-      <img src="./imagenes/logo empresa.jpeg" alt="" />
+    <!-- HEADER con video de fondo -->
+    <header class="header">
+      <video class="header__video" src="./video/video.mp4" autoplay muted preload="auto" loop></video>
     </header>
-    <section>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <section class="titulo-principal">
       <h1>ALQUILER DE TRAJES Y ACCESORIOS</h1>
-    
     </section>
-    <section>
-      <div>
-        <img src="./imagenes/ambo importado rosa.jpeg" alt="" />
-        <label for=""> Ambo Importado Rosa</label>
+
+    <!-- GALERÍA DE PRODUCTOS -->
+    <section class="galeria">
+      <div class="galeria__item">
+        <img src="./imagenes/ambo importado rosa.jpeg" alt="Ambo Importado Rosa" />
+        <label>Ambo Importado Rosa</label>
       </div>
-      <div>
-        <img src="./imagenes/saco estampado flores importado.jpeg" alt="" />
-        <label for=""> Saco Estampado Flores Importado</label>
+
+      <div class="galeria__item">
+        <img src="./imagenes/saco estampado flores importado.jpeg" alt="Saco Estampado Flores Importado" />
+        <label>Saco Estampado Flores Importado</label>
       </div>
-      <div>
-        <img src="./imagenes/saco simil jeans importado.jpeg" alt="" />
-        <label for=""> Saco Simil Jeans Importado</label>
+
+      <div class="galeria__item">
+        <img src="./imagenes/saco simil jeans importado.jpeg" alt="Saco Simil Jeans Importado" />
+        <label>Saco Simil Jeans Importado</label>
       </div>
-      <div>
-        <img src="./imagenes/smoking negro mecanico.jpeg" alt="" />
-        <label for=""> Smoking Negro Mecanico</label>
+
+      <div class="galeria__item">
+        <img src="./imagenes/smoking negro mecanico.jpeg" alt="Smoking Negro Mecánico" />
+        <label>Smoking Negro Mecánico</label>
       </div>
-      <div>
-        <img src="./imagenes/terno brocado importado.jpeg" alt="" />
-        <label for=""> Terno Brocado Importado</label>
+
+      <div class="galeria__item">
+        <img src="./imagenes/terno brocado importado.jpeg" alt="Terno Brocado Importado" />
+        <label>Terno Brocado Importado</label>
       </div>
     </section>
-    <section>
-        <h2>Quienes somos?</h2>
-        <p>Somos una empresa de Mendoza que nos dedicamos al alquiler de trajes</p>
-        <H2> Servicios</H2>
-        <p>La atención personalizada y la profesionalidad de nuestro equipo humano, unido a la excelente calidad de nuestros productos, hacen de ESCLUVISE una empresa líder de referencia en el sector del vestir masculino.</p>
-        <h3>ALQUILER DE TRAJES</h3>
-        <P>Ofrecemos servicios de alquiler de sastrería clásica, prendas de etiqueta y accesorios para hombres.
-Dando el servicio de poder realizar alquileres parciales y/o totales de las prendas siendo estas ya utilizadas, de semi-estreno o nuevas a estrenar.</P>
+
+    <!-- QUIÉNES SOMOS -->
+    <section class="info">
+      <h2>¿Quiénes somos?</h2>
+      <p>Somos una empresa de Mendoza que nos dedicamos al alquiler de trajes.</p>
+
+      <h2>Servicios</h2>
+      <p>
+        La atención personalizada y la profesionalidad de nuestro equipo humano, unido a la 
+        excelente calidad de nuestros productos, hacen de ESCLUVISE una empresa líder de 
+        referencia en el sector del vestir masculino.
+      </p>
     </section>
-<footer>
-    <div>
-        <p>Ubicacion: Galeria Bamac Local 5</p>
-        <p>WhastApp: 261 609 1545</p>
-        <p>Horarios de atencion Lunes a Viernes de 10:00 hs a 13:00 hs y de 17:00 hs a 20:00 hs, Sabados 10:00 hs a 13:00 hs</p>
-    </div>
-    <p>Exclusive Alquiler de trajes. Todos los derechos reservados</p>
-</footer>
-</body>
+
+    <!-- TIPOS DE ALQUILER -->
+    <section class="servicios">
+      <h2>ALQUILER DE TRAJES</h2>
+      <ul>
+        <li>Casamientos</li>
+        <li>Egresados</li>
+        <li>Cumpleaños de 15 y 18 años</li>
+        <li>Cena empresarial</li>
+        <li>Eventos en general</li>
+      </ul>
+    </section>
+
+    <!-- MEDIOS DE PAGO -->
+    <section class="pagos">
+      <h2>MEDIOS DE PAGO</h2>
+      <p>
+        Efectivo, transferencia bancaria, Mercado Pago, débito, crédito (un solo pago)
+      </p>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section class="ubicacion">
+      <h2>¿DÓNDE ENCONTRARNOS?</h2>
+      <p>Galería Bamac - Local 5</p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto">
+      <h2>CONTACTO</h2>
+      <p>WhatsApp: 261 609 1545</p>
+    </section>
+
+    <!-- HORARIOS -->
+    <section class="horarios">
+      <h2>HORARIOS DE ATENCIÓN</h2>
+      <p>
+        Lunes a sábados de 10:00 a 13:00 y de 17:00 a 20:00. Domingo: Cerrado.
+      </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>
+        <p>Exclusive Alquiler de trajes. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
 </html>
