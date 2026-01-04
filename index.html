@@ -1,110 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exclusive</title>
 
-    <!-- Enlazamos el archivo de estilos externo -->
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <!-- HEADER con video de fondo -->
-    <header class="header">
-      <video class="header__video" src="./video/video.mp4" autoplay muted preload="auto" loop></video>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exclusive</title>
 
-    <!-- TÍTULO PRINCIPAL -->
-    <section class="titulo-principal">
-      <h1>ALQUILER DE TRAJES Y ACCESORIOS</h1>
-    </section>
+  <!-- Google Fonts: Playfair Display (Titulos) & Montserrat (Textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
 
-    <!-- GALERÍA DE PRODUCTOS -->
-    <section class="galeria">
-      <div class="galeria__item">
-        <img src="./imagenes/ambo importado rosa.jpeg" alt="Ambo Importado Rosa" />
-        <label>Ambo Importado Rosa</label>
-      </div>
+  <!-- Enlazamos el archivo de estilos externo -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
 
-      <div class="galeria__item">
-        <img src="./imagenes/saco estampado flores importado.jpeg" alt="Saco Estampado Flores Importado" />
-        <label>Saco Estampado Flores Importado</label>
-      </div>
+<body>
+  <!-- HEADER con video de fondo -->
+  <header class="header">
+    <video class="header__video" src="./video/video.mp4" autoplay muted preload="auto" loop></video>
+  </header>
 
-      <div class="galeria__item">
-        <img src="./imagenes/saco simil jeans importado.jpeg" alt="Saco Simil Jeans Importado" />
-        <label>Saco Simil Jeans Importado</label>
-      </div>
+  <!-- TÍTULO PRINCIPAL (Debajo del video) -->
+  <section class="titulo-principal">
+    <h1>ALQUILER DE TRAJES Y ACCESORIOS</h1>
+  </section>
 
-      <div class="galeria__item">
-        <img src="./imagenes/smoking negro mecanico.jpeg" alt="Smoking Negro Mecánico" />
-        <label>Smoking Negro Mecánico</label>
-      </div>
+  <!-- GALERÍA DE PRODUCTOS -->
+  <section class="galeria">
+    <div class="galeria__item">
+      <img src="./imagenes/ambo importado rosa.jpeg" alt="Ambo Importado Rosa" loading="lazy" />
+      <label>Ambo Importado Rosa</label>
+    </div>
 
-      <div class="galeria__item">
-        <img src="./imagenes/terno brocado importado.jpeg" alt="Terno Brocado Importado" />
-        <label>Terno Brocado Importado</label>
-      </div>
-    </section>
+    <div class="galeria__item">
+      <img src="./imagenes/saco estampado flores importado.jpeg" alt="Saco Estampado Flores Importado" loading="lazy" />
+      <label>Saco Estampado Flores Importado</label>
+    </div>
 
-    <!-- QUIÉNES SOMOS -->
-    <section class="info">
-      <h2>¿Quiénes somos?</h2>
-      <p>Somos una empresa de Mendoza que nos dedicamos al alquiler de trajes.</p>
+    <div class="galeria__item">
+      <img src="./imagenes/saco simil jeans importado.jpeg" alt="Saco Simil Jeans Importado" loading="lazy" />
+      <label>Saco Simil Jeans Importado</label>
+    </div>
 
-      <h2>Servicios</h2>
-      <p>
-        La atención personalizada y la profesionalidad de nuestro equipo humano, unido a la 
-        excelente calidad de nuestros productos, hacen de ESCLUVISE una empresa líder de 
-        referencia en el sector del vestir masculino.
-      </p>
-    </section>
+    <div class="galeria__item">
+      <img src="./imagenes/smoking negro mecanico.jpeg" alt="Smoking Negro Mecánico" loading="lazy" />
+      <label>Smoking Negro Mecánico</label>
+    </div>
 
-    <!-- TIPOS DE ALQUILER -->
-    <section class="servicios">
-      <h2>ALQUILER DE TRAJES</h2>
-      <ul>
-        <li>Casamientos</li>
-        <li>Egresados</li>
-        <li>Cumpleaños de 15 y 18 años</li>
-        <li>Cena empresarial</li>
-        <li>Eventos en general</li>
-      </ul>
-    </section>
+    <div class="galeria__item">
+      <img src="./imagenes/terno brocado importado.jpeg" alt="Terno Brocado Importado" loading="lazy" />
+      <label>Terno Brocado Importado</label>
+    </div>
+  </section>
 
-    <!-- MEDIOS DE PAGO -->
-    <section class="pagos">
-      <h2>MEDIOS DE PAGO</h2>
-      <p>
-        Efectivo, transferencia bancaria, Mercado Pago, débito, crédito (un solo pago)
-      </p>
-    </section>
+  <!-- QUIÉNES SOMOS -->
+  <section class="info">
+    <h2>¿Quiénes somos?</h2>
+    <p>Somos una empresa de Mendoza que nos dedicamos al alquiler de trajes.</p>
 
-    <!-- UBICACIÓN -->
-    <section class="ubicacion">
-      <h2>¿DÓNDE ENCONTRARNOS?</h2>
-      <p>Galería Bamac - Local 5</p>
-    </section>
+    <h2>Servicios</h2>
+    <p>
+      La atención personalizada y la profesionalidad de nuestro equipo humano, unido a la
+      excelente calidad de nuestros productos, hacen de ESCLUVISE una empresa líder de
+      referencia en el sector del vestir masculino.
+    </p>
+  </section>
 
-    <!-- CONTACTO -->
-    <section class="contacto">
-      <h2>CONTACTO</h2>
-      <p>WhatsApp: 261 609 1545</p>
-    </section>
+  <!-- TIPOS DE ALQUILER -->
+  <section class="servicios">
+    <h2>ALQUILER DE TRAJES</h2>
+    <ul>
+      <li>Casamientos</li>
+      <li>Egresados</li>
+      <li>Cumpleaños de 15 y 18 años</li>
+      <li>Cena empresarial</li>
+      <li>Eventos en general</li>
+    </ul>
+  </section>
 
-    <!-- HORARIOS -->
-    <section class="horarios">
-      <h2>HORARIOS DE ATENCIÓN</h2>
-      <p>
-        Lunes a sábados de 10:00 a 13:00 y de 17:00 a 20:00. Domingo: Cerrado.
-      </p>
-    </section>
+  <!-- MEDIOS DE PAGO -->
+  <section class="pagos">
+    <h2>MEDIOS DE PAGO</h2>
+    <p>
+      Efectivo, transferencia bancaria, Mercado Pago, débito, crédito (un solo pago)
+    </p>
+  </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div>
-        <p>Exclusive Alquiler de trajes. Todos los derechos reservados.</p>
-      </div>
-    </footer>
-  </body>
+  <!-- UBICACIÓN -->
+  <section class="ubicacion">
+    <h2>¿DÓNDE ENCONTRARNOS?</h2>
+    <p>Galería Bamac - Local 5</p>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto">
+    <h2>CONTACTO</h2>
+    <p>WhatsApp: 261 609 1545</p>
+  </section>
+
+  <!-- HORARIOS -->
+  <section class="horarios">
+    <h2>HORARIOS DE ATENCIÓN</h2>
+    <p>
+      Lunes a sábados de 10:00 a 13:00 y de 17:00 a 20:00. Domingo: Cerrado.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>
+      <p>Exclusive Alquiler de trajes. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+
 </html>

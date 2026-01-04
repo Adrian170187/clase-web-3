@@ -1,9 +1,25 @@
 /* ======================================================
-   ESTILO MODERNO, SERIO Y ELEGANTE
-   Basado en tu CSS + Paleta oscuro #2b2e28 + Detalles dorados
+   EXCLUSIVE - DISEÑO HIGH-END ELEGANT
+   ------------------------------------------------------
+   Fuentes: 'Playfair Display' (Serif) & 'Montserrat' (Sans)
+   Paleta: Deep Black (#080808) + Champagne Gold (#D4AF37)
    ====================================================== */
 
-/* Reset básico */
+:root {
+    --color-bg: #050505;
+    --color-text-main: #e0e0e0;
+    --color-text-muted: #a0a0a0;
+    --color-gold: #D4AF37;
+    --color-gold-light: #F4DF90;
+    --color-gold-dark: #AA8C2C;
+    --color-card-bg: rgba(20, 20, 20, 0.7);
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --shadow-gold: 0 5px 20px rgba(212, 175, 55, 0.15);
+}
+
+/* Reset avanzado */
 * {
     margin: 0;
     padding: 0;
@@ -11,166 +27,349 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #2b2e28; /* fondo elegante oscuro */
-    color: #e9e6d8; /* texto suave claro */
-    line-height: 1.6;
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* ==========================
-   HEADER
+   FONDO CON ESTRELLAS (REFINADO)
+   ========================== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* Gradiente radial de estrellas sutiles simuladas */
+    background-image:
+        radial-gradient(1px 1px at 25px 5px, white, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 50px 25px, #D4AF37, rgba(0, 0, 0, 0)),
+        radial-gradient(1.5px 1.5px at 125px 20px, white, rgba(0, 0, 0, 0)),
+        radial-gradient(1.5px 1.5px at 250px 80px, #D4AF37, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 300px 150px, white, rgba(0, 0, 0, 0));
+    background-size: 550px 550px;
+    z-index: -1;
+    opacity: 0.5;
+    animation: twinkle 60s linear infinite;
+}
+
+@keyframes twinkle {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 -550px;
+    }
+}
+
+/* Gradiente de fondo base para profundidad */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(30, 30, 30, 0.3) 0%, var(--color-bg) 90%);
+    z-index: -2;
+}
+
+/* ==========================
+   TIPOGRAFÍA Y UTILS
+   ========================== */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--color-gold);
+    font-weight: 400;
+    /* Elegancia en delgadez */
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    line-height: 1.3;
+}
+
+p {
+    color: var(--color-text-muted);
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Decorador de títulos (Línea dorada elegante) */
+.section-title {
+    text-align: center;
+    margin: 4rem 0 3rem 0;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+/* ==========================
+   HEADER / HERO (PURE VIDEO)
    ========================== */
 header {
-    background: #1f201d;
-    text-align: center;
-    padding: 30px 0 10px 0;
-    border-bottom: 2px solid #d4b676; /* dorado elegante */
+    width: 100%;
+    height: 90vh;
+    /* Almost full screen, hinting at content below */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+    background: #000;
 }
 
-header img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    border: 2px solid #d4b676; /* borde dorado */
+.header__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    /* Full visibility as requested */
+    z-index: 0;
+    filter: none;
+    /* Removed filters to show original elegant video quality */
+    will-change: transform;
 }
 
 /* ==========================
-   SECCIONES
+   TÍTULO PRINCIPAL (Nueva Sección)
+   ========================== */
+.titulo-principal {
+    text-align: center;
+    padding: 4rem 20px 2rem 20px;
+    margin-top: -5px;
+    /* Conectar visualmente con el borde del header */
+    position: relative;
+    z-index: 5;
+}
+
+.titulo-principal h1 {
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    background: linear-gradient(to right, var(--color-gold), #fff, var(--color-gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.titulo-principal::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: var(--color-gold);
+    margin: 20px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ==========================
+   ANIMATIONS & UTILS (JS)
+   ========================== */
+/* Initial state for reveal elements */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+}
+
+/* Active state when in viewport */
+.active-reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================
+   SECCIONES GENERALES
    ========================== */
 section {
-    background: #33342f;
-    margin: 40px auto 40px auto;
-    max-width: 900px;
-    border-radius: 14px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.25);
-    padding: 32px 24px;
-    border: 1px solid #4a4c45;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 20px;
+    /* More breathing room */
+    position: relative;
+    z-index: 2;
 }
 
-section h1 {
+/* Quitamos los bordes de caja antiguos, usamos espacio negativo */
+.info,
+.servicios,
+.pagos,
+.ubicacion,
+.horarios,
+.contacto {
+    background: transparent;
+    border: none;
+    box-shadow: none;
     text-align: center;
-    margin: 30px 0 20px 0;
-    font-size: 2.4rem;
-    color: #d4b676; /* DORADO PRINCIPAL */
-    letter-spacing: 3px;
-    font-weight: 600;
+    max-width: 800px;
+    /* Lectura cómoda */
 }
+
+/* Ajustes específicos para textos */
+.info h2,
+.servicios h2,
+.pagos h2,
+.ubicacion h2,
+.contacto h2,
+.horarios h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-gold-light);
+}
+
+/* Listas con estilo */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--color-text-main);
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+
 
 /* ==========================
-   GALERÍA DE PRODUCTOS
+   GALERÍA DE PRODUCTOS (PREMIUM CARDS)
    ========================== */
-section:nth-of-type(2) {
+.galeria {
     display: flex;
-    
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    margin: auto;
+    gap: 3rem;
+    padding: 2rem 0;
 }
 
-section:nth-of-type(2) div {
-    background: #2f302c;
-    border-radius: 10px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
-    padding: 18px 12px;
+.galeria__item {
+    background: var(--color-card-bg);
+    backdrop-filter: blur(12px);
+    /* Efecto vidrio */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 320px;
+    padding: 0;
+    /* Sin padding interno para imagen full width arriba */
+    border-radius: 4px;
+    /* Bordes más rectos = más formalidad */
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.galeria__item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-gold), 0 20px 40px rgba(0, 0, 0, 0.6);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Imagen del producto */
+.galeria__item img {
+    width: 100%;
+    height: 480px;
+    /* Muy alto y elegante */
+    object-fit: contain;
+    /* Mantiene la proporción perfecta */
+    object-position: center;
+    background-color: #0c0c0c;
+    /* Fondo oscuro detrás de la imagen */
+    transition: transform 0.6s ease;
+    mix-blend-mode: normal;
+}
+
+.galeria__item:hover img {
+    transform: scale(1.03);
+}
+
+/* Etiqueta del producto */
+.galeria__item label {
+    padding: 1.5rem;
     text-align: center;
-    width: 170px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #d4b67666;
-}
-
-section:nth-of-type(2) div:hover {
-    transform: translateY(-6px) scale(1.06);
-    box-shadow: 0 10px 26px rgba(212,182,118,0.35);
-    border-color: #d4b676;
-}
-
-section img {
-    width: 100px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 7px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    border: 2px solid #d4b676;
-}
-
-section label {
-    display: block;
-    margin-top: 8px;
-    font-size: 1rem;
-    color: #f3f2ea;
-}
-
-/* ==========================
-   TEXTOS EN SECCIONES
-   ========================== */
-section h2, section h3, section h4, section h5, section h6 {
-    color: #d4b676;
-    margin-bottom: 10px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-text-main);
     letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    transition: color 0.3s;
 }
 
-section p {
-    margin-bottom: 18px;
-    color: #e9e6d8;
+.galeria__item:hover label {
+    color: var(--color-gold);
 }
 
 /* ==========================
    FOOTER
    ========================== */
 footer {
-    background: #1f201d;
-    color: #dcd8c6;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    background: #000;
+    padding: 3rem 1rem;
     text-align: center;
-    padding: 28px 10px 18px 10px;
-    margin-top: 40px;
-    border-top: 2px solid #d4b676;
-}
-
-footer div {
-    margin-bottom: 10px;
+    margin-top: 4rem;
 }
 
 footer p {
-    font-size: 1rem;
-    margin-bottom: 6px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: var(--color-gold-dark);
+    text-transform: uppercase;
+    margin: 0;
 }
 
 /* ==========================
    RESPONSIVE
    ========================== */
-@media (max-width: 1100px) {
-    header img {
-        width: 90vw;
-        max-width: 100%;
+@media (max-width: 768px) {
+    header {
+        height: 50vh;
     }
-}
 
-@media (max-width: 700px) {
-    section:nth-of-type(2) {
-        gap: 18px;
+    .titulo-principal h1 {
+        font-size: 2rem;
+        margin-top: 2rem;
     }
-    section:nth-of-type(2) div {
-        width: 120px;
-        padding: 10px 5px;
-    }
-    section img {
-        width: 70px;
-        height: 80px;
-    }
-    section:nth-of-type(3) {
-        padding: 18px 6px;
-    }
-    .header__video {
+
+    .galeria__item {
         width: 100%;
+        max-width: 360px;
     }
-}
 
-/* Ajustes finales */
-header img {
-    width: 1000px;
-}
-section img {
-    width: 100px;
+    .galeria__item img {
+        height: 400px;
+    }
 }
